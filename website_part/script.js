@@ -43,6 +43,14 @@ const addFavorites = (cat) =>{
         favorites.push(cat);
         localStorage.setItem("favorites", JSON.stringify(favorites))
         displayFavorites();
+        Toastify({
+            text: "Chat ajouté aux favoris",
+            backgroundColor: "#232876", 
+            color: "white",
+            gravity: "top",             
+            position: "center",            
+            duration: 5000             
+        }).showToast();
     }
 }
 
@@ -50,6 +58,14 @@ const removeFavorites = (catId) => {
     favorites = favorites.filter(cat => cat.id !== catId);
     localStorage.setItem('favorites', JSON.stringify(favorites));
     displayFavorites();
+    Toastify({
+        text: "Chat retiré des favoris",
+        backgroundColor: "#232876", 
+        color: "white",
+        gravity: "top",             
+        position: "center",            
+        duration: 5000            
+    }).showToast();
 };
 
 const displayFavorites = () => {
