@@ -27,7 +27,7 @@ const displayCats = (cats, container, isFavorite) =>{
             if(isFavorite){
                 removeFavorites(cat.id);
             }else{
-                addFavorites(cat)
+                addFavorites(cat);
             }
         });
         catDiv.appendChild(img);
