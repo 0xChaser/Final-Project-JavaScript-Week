@@ -1,0 +1,135 @@
+:root {
+    --primary-color: #232876;
+    --primary-button: #007bff;
+    --button-hover: #0056b3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #CECECE;
+    color: var(--primary-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.big-title{
+    font-size: 45px;
+    color: var(--primary-color);
+}
+
+
+.small-title{
+    font-size: 38px;
+    margin-top: 30px;
+    color: var(--primary-color);
+}
+
+button {
+    background-color: #1423DC;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#random-cats-container, #favorites-cats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cat-item {
+    width: 250px;
+    height: 350px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cat-item:hover {
+    transform: scale(1.05);
+}
+
+
+.cat-image {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.fav-button {
+    background-color: var(--primary-button);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.fav-button:hover {
+    background-color: var(--button-hover);
+    cursor: pointer;
+}
+
+.empty{
+    font-size: 25px;
+    color: var(--primary-color);
+}
+
+
+a{
+    text-decoration: none;
+    color: #1423DC;
+}
+
+a:hover{
+    cursor: pointer;
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .cat-item {
+        width: 45%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .cat-item {
+        width: 90%;
+        height: auto;
+    }
+
+    button {
+        width: 100%;
+    }
+}
